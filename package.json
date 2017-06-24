@@ -1,0 +1,50 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "Social Network Backend REST Api",
+  "main": "build/server.js",
+  "scripts": {
+    "test": "gulp test",
+    "tsc": "tsc",
+    "tsc-watch": "tsc -w",
+    "watch": "nodemon --watch build/src build/src/index.js",
+    "start": "node build/src build/src/index.js",
+    "start-dev": "concurrently  \"npm run tsc-watch\" \"npm run watch\" "
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "server"
+  ],
+  "author": "Katharina Höchstätter",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.0",
+    "boom": "^4.2.0",
+    "fs": "0.0.1-security",
+    "hapi": "^16.1.0",
+    "hapi-auth-jwt2": "^7.2.4",
+    "hapi-swagger": "^7.6.0",
+    "inert": "^4.1.0",
+    "joi": "^10.2.0",
+    "jsonwebtoken": "^7.2.1",
+    "mongoose": "^4.7.7",
+    "nconf": "^0.8.4",
+    "path": "^0.12.7",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-env": "^0.4.0",
+    "gulp-mocha": "^3.0.1",
+    "gulp-rimraf": "^0.2.1",
+    "gulp-shell": "^0.5.2",
+    "gulp-tslint": "^7.0.1",
+    "mocha": "^3.2.0",
+    "stream-to-promise": "^2.2.0",
+    "tslint": "^4.3.1",
+    "typescript": "^2.1.5",
+    "typings": "^2.1.0"
+  }
+}

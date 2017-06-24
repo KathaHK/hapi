@@ -1,0 +1,230 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Social Network",
+		"_postman_id": "373f3864-e57d-450a-175e-2d6eaba69002",
+		"description": "Seminararbeit Social Network",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"description": "",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"url": "localhost:5000/users/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"test@example.com\",\n\t\"password\": \"admin\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"url": "localhost:5000/users",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"test@example.com\",\n\t\"name\": \"Testname\",\n\t\"password\": \"admin\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Information",
+					"request": {
+						"url": "localhost:5000/users/info",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4N2RmNmE0YjllZTI3YmFhNTgzMTQwMCIsInNjb3BlIjpbImFkbWluIl0sImVtYWlsIjoiaG9wcGVAanVodWp1aHUuZGUiLCJpYXQiOjE0ODg4ODYyMDYsImV4cCI6MTQ4ODg4OTgwNn0.tt5Uxg83WlUoR_jOmAAXtgbctymtgUVi7gQOkvRBeVg",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update current user",
+					"request": {
+						"url": "localhost:5000/users",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4N2RmNmE0YjllZTI3YmFhNTgzMTQwMCIsInNjb3BlIjpbImFkbWluIl0sImVtYWlsIjoiaG9wcGVAanVodWp1aHUuZGUiLCJpYXQiOjE0ODg4ODYyMDYsImV4cCI6MTQ4ODg4OTgwNn0.tt5Uxg83WlUoR_jOmAAXtgbctymtgUVi7gQOkvRBeVg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Johannes\",\n\t\"password\": \"admin\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update other user",
+					"request": {
+						"url": "http://localhost:5000/users/587e854bfe79594c0358e103",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU4N2RmNmE0YjllZTI3YmFhNTgzMTQwMCIsInNjb3BlIjpbImFkbWluIl0sImVtYWlsIjoiaG9wcGVAanVodWp1aHUuZGUiLCJpYXQiOjE0ODg4ODYyMDYsImV4cCI6MTQ4ODg4OTgwNn0.tt5Uxg83WlUoR_jOmAAXtgbctymtgUVi7gQOkvRBeVg",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"scope\": [\"admin\"]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Follow a user",
+					"request": {
+						"url": "localhost:5000/users/follow",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5NGQ4NDQyZWU5ZGY4MjUwYTUwOTk5OCIsInNjb3BlIjpbImFkbWluIl0sImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTQ5ODMwNzU2MiwiZXhwIjoxNDk4MzExMTYyfQ.rR_z-7dg9X2_StFTFwT5pdVzl_pxa7seOcuOPqx_Y-U",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"following\": \"594e45b11155d30942bfafd0\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Unfollow a user",
+					"request": {
+						"url": "localhost:5000/users/unfollow",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5NGQ4NDQyZWU5ZGY4MjUwYTUwOTk5OCIsInNjb3BlIjpbImFkbWluIl0sImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTQ5ODMwNzU2MiwiZXhwIjoxNDk4MzExMTYyfQ.rR_z-7dg9X2_StFTFwT5pdVzl_pxa7seOcuOPqx_Y-U",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"following\": \"594e45c71155d30942bfafd8\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Post",
+					"request": {
+						"url": "http://localhost:5000/posts",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5NGQ4NDQyZWU5ZGY4MjUwYTUwOTk5OCIsInNjb3BlIjpbImFkbWluIl0sImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTQ5ODI5OTk4MSwiZXhwIjoxNDk4MzAzNTgxfQ.sw6rNRfga2P1qJkquoacQBA14e2KnP8WVDPf6T5j-l8",
+								"description": ""
+							},
+							{
+								"key": "",
+								"value": "",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"authorId\": \"Tester01\",\n\t\"message\": \"works.\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get posts of current user",
+					"request": {
+						"url": "http://localhost:5000/posts",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5NGQ4NDQyZWU5ZGY4MjUwYTUwOTk5OCIsInNjb3BlIjpbImFkbWluIl0sImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTQ5ODI5OTk4MSwiZXhwIjoxNDk4MzAzNTgxfQ.sw6rNRfga2P1qJkquoacQBA14e2KnP8WVDPf6T5j-l8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

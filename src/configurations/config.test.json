@@ -1,0 +1,17 @@
+{
+  "database": {
+    "connectionString": "mongodb://admin@127.0.0.1/quizmachine-test"
+  },
+  "server": {
+    "port": 5000,
+    "jwtSecret": "random-secret-password",
+    "jwtExpiration": "1h",
+    "plugins": [
+      "swagger",
+      "jwt-auth"
+    ]
+  },
+  "files": {
+    "storage": "images/test"
+  }
+}
